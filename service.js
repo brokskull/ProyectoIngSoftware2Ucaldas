@@ -14,7 +14,7 @@ host: 'localhost',
 user: 'root',
 password: '',
 database: 'buses',
-port: 3306
+port: 8082
 });
 app.listen(port,'127.0.0.1');
 console.log('Server listening in port ' + port);
