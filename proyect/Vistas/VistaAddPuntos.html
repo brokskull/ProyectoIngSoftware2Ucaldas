@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Login</title>
+    <meta charset="utf-8">    
+	<!--Includes-->
+	<script src="../Includes/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="../Includes/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.js" type="text/javascript"></script>
+    <script src="../Includes/bootstrap-fileinput-master/js/fileinput.min.js" type="text/javascript"></script>
+    <script src="../Includes/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../Includes/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Includes/bootstrap-fileinput-master/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+    <!--Scripts-->
+    <script src="../Js/StriptChat.js" type="text/javascript"></script>
+</head>
+
+ <body class="body">
+    <div class="container" align="center">
+        <form action="http://127.0.0.1:1337/routes" method="POST">
+            <div class="container from-group" align="center">
+                <label for="idRuta"></label>
+                <input type="text" name="idRuta" placeholder="Id Ruta" id="idRuta" class="form-control">
+            </div>
+            <div class="container" align="center">
+                <label for="longitud"></label>
+                <input type="text" name="longitud" placeholder="Longitud" id="longitud" class="form-control">
+            </div>
+            <div class="container" align="center">
+                <label for="latitud"></label>
+                <input type="text" name="latitud" placeholder="Latitud" id="latitud" class="form-control">
+            </div>
+            <div class="container" align="center">
+                <br>
+                <input type="submit" value="enviar" class="btn btn-primary">
+            </div>
+        </form>
+
+    </div>
+            
+            
+</body>    
+</html>

@@ -1,0 +1,36 @@
+.titulo{
+	width: 100%;
+	opacity: 0.9;
+	background-color: white;
+}
+.body{	
+}
+.contenido{
+	height: 500px;
+	opacity: 0.9;
+	background-color: white;
+}
+.footer{
+	width: 100%;
+	height: 50%;
+	opacity: 0.9;
+	background-color: white;	
+}
+.bordesRedondos{
+	border-radius: 6px 6px 6px 6px;
+	-moz-border-radius: 6px 6px 6px 6px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	border: 0px solid #000000;
+}
+.mapa{
+	overflow:hidden;
+	overflow-y:scroll;
+	height:447px;
+	width:100%;
+}
+#upload_link{
+    text-decoration:none;
+}
+#upload{
+    display:none
+}
