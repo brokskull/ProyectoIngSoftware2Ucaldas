@@ -1,7 +1,9 @@
 //CONFIGURACIÓN
 let express = require('express');
 let bodyParser = require('body-parser');
+
 let routesBus = require("./routes/bus");
+let routesRoute = require("./routes/ruta");
 
 
 let app = express();
@@ -19,7 +21,7 @@ let mysql = require('mysql');
 let connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'loaiza1144',
+    password: 'jhona369',
     database: 'BUSES',
     port: 3306
 });
@@ -128,7 +130,7 @@ app.delete('/routes/delete/:idRoute', (req, res) => {
 });
 
 app.use(routesBus);
-
+app.use(routesRoute);
 ///------
 
 
