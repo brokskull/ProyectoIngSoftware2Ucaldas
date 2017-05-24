@@ -111,15 +111,14 @@ function getRutas() {
 }
 
 function deleteRoute(id) {
-    alert(`LLegue hasta acá perra ${id}`);
-
     $.ajax({
         type: 'DELETE',
         url: 'http://127.0.0.1:1337/routes/delete/' + id,
         dataType: "json",
         contentType: 'application/json',
-        success: function (data, status, jqXHR) {
+        success: function (data) {
             alert("Successfully Deleted");
+            $("#enviarget").click();
         }
     });
 }
