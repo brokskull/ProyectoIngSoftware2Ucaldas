@@ -6,7 +6,7 @@ DROP TABLE punto;
 
 
 create table punto(
-	id_punto int primary key,
+	id_punto int primary key AUTO_INCREMENT,
 	longitud decimal(9,6) NOT NULL,
 	latitud decimal(9,6) NOT NULL
 );
