@@ -2,7 +2,6 @@
  * Created by jimmyloaiza on 24/05/17.
  */
 
-import * as $ from '../../includes/jquery-3.2.1';
 let map;
 let Points = [];
 let contador = 0;

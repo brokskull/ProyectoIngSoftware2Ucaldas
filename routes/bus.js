@@ -3,17 +3,12 @@
  */
 
 let express = require('express');
-let mysql = require('mysql');
 
 let router = express.Router();
 
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'loaiza1144',
-    database: 'BUSES',
-    port: 3306
-});
+const Connection = require('../models/Connection');
+let dataBase = new Connection();
+let connection = dataBase.connection;
 
 //Set of bus
 router.route('/buses')
@@ -34,7 +29,8 @@ router.route('/buses')
               console.log(error);
               throw error;
           }
-          console.log('Insert Successfully ');
+          console.log('Successfully Deleted');
+          res.json('Successfully Deleted');
       });
 });
 

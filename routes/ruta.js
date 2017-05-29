@@ -3,28 +3,20 @@
  */
 
 let express = require('express');
-let mysql = require('mysql');
-
 let router = express.Router();
 
+const Connection = require('../models/Connection');
+let dataBase = new Connection();
+let connection = dataBase.connection;
 
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'jhona369',
-    database: 'BUSES',
-    port: 3306
-});
-
-//get puntos por ruta
-router.route("/points/:idruta")
+//get points in a route
+router.route("/points/:idRuta")
     .get((req, res) => {
         console.log(req.params.idruta);
-        const queryString = 'SELECT latitud,longitud ' +
+        const queryString = 'SELECT p.latitud, p.longitud ' +
             'from punto p, puntosxruta r ' +
             'where r.id_punto=p.id_punto and r.id_ruta=?';
-        connection.query("SELECT latitud,longitud " +
-            "from punto p, puntosxruta r where r.id_punto=p.id_punto and r.id_ruta=?", [req.params.idruta],function (err, rows, fields) {
+        connection.query(queryString, [req.params.idRuta],function (err, rows, fields) {
             if (err)
                 console.log(err);
             return res.json(rows);
